@@ -1,14 +1,16 @@
 import Layout from "@/components/Layout";
-import Nav from "@/components/Nav";
+import { useState } from "react";
+
 
 export default function Home() {
-  const backgroundStyle = {
-    backgroundImage: 'url("/background.png")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh',
-    margin: 'auto',
-  }
+  const [email, setEmail] = useState('')
+  // const backgroundStyle = {
+  //   backgroundImage: 'url("/background.png")',
+  //   backgroundSize: 'cover',
+  //   backgroundPosition: 'center',
+  //   height: '100vh',
+  //   margin: 'auto',
+  // }
   return (
   <Layout>
         <main className=" text-center w-full m-auto ">
@@ -21,14 +23,16 @@ export default function Home() {
               Explore Ethereum with the best wallet for iOS. <br />
               Interacting with crypto has never been so simple.
             </p>
-            <div className=" bg-black gradient-border-mask self-stretch bg-opacity-20 my-8 rounded-[3.25rem] w-full max-w-[690px] mx-auto flex items-center justify-between">
+            <div className=" bg-black gradient-border-mask self-stretch bg-opacity-20 my-8 text-white  rounded-[3.25rem] w-full max-w-[690px] mx-auto flex items-center justify-between">
               <input
+              value={email}
                 type="email"
-                className=" bg-transparent placeholder:text-white w-full self-stretch  outline-none p-6"
+                className=" bg-transparent placeholder:text-white w-full self-stretch z-40  outline-none p-6"
                 placeholder=" Enter your email"
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <div className="  rounded-[30px]  px-1 gradient-border-mask btn  mr-2">
-                <button className=" bg-white bg-opacity-0 sheen border text-sm whitespace-nowrap rounded-[30px] md:w-[152px] px-5 h-[58px] md:text-lg">
+              <div className="  rounded-[30px]  px-1 gradient-border-mask btn  mr-2 ">
+                <button className=" bg-white bg-opacity-0 sheen border py-3 text-sm whitespace-nowrap rounded-[30px] md:w-[152px] px-5 h-[58px] md:text-lg">
                   Join Waitlist
                 </button>
               </div>
