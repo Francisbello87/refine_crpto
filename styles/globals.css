@@ -51,7 +51,7 @@ button:focus::after {
 }
 
 .gradient-text {
-  color: transparent;
+  color:transparent;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 1),
@@ -60,7 +60,7 @@ button:focus::after {
   );
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shimmer 5s infinite;
+  /* animation: shimmer 5s infinite; */
 }
 
 @keyframes shimmer {

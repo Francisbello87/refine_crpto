@@ -10,7 +10,7 @@ export default function Layout({ children, header, heading, paragraph }) {
     const timeline = gsap.timeline({ defaults: { opacity: 0 } });
 
     timeline
-      .fromTo(background.current, { opacity: 0 }, { opacity: 1, duration: 1 })
+      .fromTo(background.current, { opacity: 0 }, { opacity: 1, })
       .fromTo(
         header.current,
         { y: 100, opacity: 0 },
@@ -32,10 +32,7 @@ export default function Layout({ children, header, heading, paragraph }) {
         navRef.current,{ y:-100, opacity:0},
         {y: 0, opacity:1, delay: 3},"+=1"
       )
-      .call(() => {
-        header.current.classList.add("gradient-text");
-        heading.current.classList.add("gradient-text");
-      });
+     
   }, [header, heading, paragraph, navRef]);
 
   const backgroundStyle = {
