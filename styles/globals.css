@@ -14,6 +14,7 @@ body{
   height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
+  
 }
 
 button {
@@ -62,7 +63,9 @@ button:focus::after {
   background-clip: text;
   /* animation: shimmer 5s infinite; */
 }
-
+.shimmer{
+    animation: shimmer 5s infinite;
+}
 @keyframes shimmer {
   0% {
     background-position: -500px;
@@ -95,4 +98,8 @@ button:focus::after {
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
+}
+
+.bg{
+  visibility: hidden;
 }
